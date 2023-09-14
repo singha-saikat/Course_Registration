@@ -1,11 +1,15 @@
-const DashboardDisplay = ({ course }) => {
+const DashboardDisplay = ({ course, index }) => {
   console.log(course);
   const { course_name } = course;
   return (
-    <div>
-      <ol type="1">
-        <li>{course_name}</li>
-      </ol>
+    <div className="text-left w-full inline">
+      <div>
+        {index + 1}.{course_name}
+      </div>
+      <div>
+        <hr />
+        <p>Total Credit Hour :</p>
+      </div>
     </div>
   );
 };

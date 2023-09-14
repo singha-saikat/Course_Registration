@@ -1,6 +1,12 @@
-const Cart = ({ course, handleSelectBtn }) => {
+const Cart = ({ course, handleSelectBtn,handleCredit }) => {
   const { course_name, image_url, course_detail, course_price, credit_hours } =
     course;
+
+    const handleSelectBTn = () =>{
+      handleSelectBtn(course)
+      handleCredit(course)
+
+    }
   return (
     <div>
       <div className="card  bg-base-100 shadow-xl h-full p-2 ">
@@ -38,7 +44,7 @@ const Cart = ({ course, handleSelectBtn }) => {
           <div>
             
             <button
-              onClick={ () => handleSelectBtn(course)}
+              onClick={handleSelectBTn}
               className="btn btn-wide  bg-blue-500 mb-4"
             >
               Select

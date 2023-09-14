@@ -5,6 +5,7 @@ import Dashboard from "../Dashbord/Dashboard";
 const AllCart = () => {
     const [courses ,setCourses] = useState([])
     const [dashboard,setDashboard] = useState([])
+    const [credit,setCredit] = useState(0)
     useEffect(() =>{
         fetch('./../../../public/course.json')
         .then( res => res.json())
@@ -15,6 +16,12 @@ const AllCart = () => {
         setDashboard(newCourseAdd)
         
     }
+    const handleCredit = (course) =>{
+        const newCredit = [...credit,course]
+        setCredit(newCredit)
+
+    }
+    
 
     return (
         <div className="md:flex gap-4">
@@ -23,10 +30,11 @@ const AllCart = () => {
                 key={course.id} 
                 course={course}
                 handleSelectBtn={handleSelectBtn}
+                handleCredit={handleCredit}
                 ></Cart>)
                 }
             </div>
-            <Dashboard dashboard={dashboard} ></Dashboard>
+            <Dashboard dashboard={dashboard} credit={credit} ></Dashboard>
         </div>
     );
 };

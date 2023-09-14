@@ -1,6 +1,6 @@
 import DashboardDisplay from "../DashbordDisplay/DashboardDisplay";
 
-const Dashboard = ({ dashboard }) => {
+const Dashboard = ({ dashboard,credit }) => {
  
   return (
     <div>
@@ -9,7 +9,10 @@ const Dashboard = ({ dashboard }) => {
         
         <hr  className="m-2"/>
         {
-            dashboard.map((course,index) => <DashboardDisplay key={index} course={course}></DashboardDisplay>)
+            dashboard.map((course,index) => <DashboardDisplay key={index} course={course} index={index}></DashboardDisplay>)
+        }
+        {
+          credit.map((course,index) => <DashboardDisplay key={index} course={course}></DashboardDisplay>)
         }
         
       </div>
