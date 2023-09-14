@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "course_name": "Introduction to Programming",
+      "credit_hours": 3,
+      "course_price": 299,
+      "course_detail": "A beginner-friendly course covering the fundamentals of programming and problem-solving.",
+      "image_url": "https://i.ibb.co/7zMVpVb/971.jpg"
+    },
+    {
+      "id": 2,
+      "course_name": "Data Structures and Algorithms",
+      "credit_hours": 4,
+      "course_price": 399,
+      "course_detail": "Learn about data structures and algorithms, key concepts for computer science and software engineering.",
+      "image_url": "https://i.ibb.co/CW2XDKR/algorithms-and-data-structures-banner.png"
+    },
+    {
+      "id": 3,
+      "course_name": "Web Development Fundamentals",
+      "credit_hours": 3,
+      "course_price": 349,
+      "course_detail": "Get started with web development, including HTML, CSS, and JavaScript basics.",
+      "image_url": "https://i.ibb.co/1f2Bjc5/download.png"
+    },
+    {
+      "id": 4,
+      "course_name": "Database Management Systems",
+      "credit_hours": 3,
+      "course_price": 349,
+      "course_detail": "Explore the principles of database design, SQL, and database management.",
+      "image_url": "https://i.ibb.co/M2pdrXV/Rectangle-2-1.png"
+    },
+    {
+      "id": 5,
+      "course_name": "Machine Learning and AI",
+      "credit_hours": 4,
+      "course_price": 499,
+      "course_detail": "Dive into the world of machine learning and artificial intelligence with hands-on projects.",
+      "image_url": "https://i.ibb.co/xYDCGLr/1-W00y-Efn95-XXQm-Hi8u8-CKl-Q.jpg"
+    },
+    {
+      "id": 6,
+      "course_name": "Computer Networks",
+      "credit_hours": 3,
+      "course_price": 349,
+      "course_detail": "Learn about networking concepts, protocols, and network administration.",
+      "image_url": "https://i.ibb.co/6vgx7wQ/networking.png"
+    },
+    {
+      "id": 7,
+      "course_name": "Operating Systems",
+      "credit_hours": 3,
+      "course_price": 349,
+      "course_detail": "Study the principles of operating systems, process management, and memory management.",
+      "image_url": "https://i.ibb.co/SN914p9/course-1952-image.png"
+    },
+    {
+      "id": 8,
+      "course_name": "Software Engineering",
+      "credit_hours": 4,
+      "course_price": 399,
+      "course_detail": "Discover software development methodologies, design patterns, and project management.",
+      "image_url": "https://i.ibb.co/nDtgDct/Rectangle-2-5.png"
+    },
+    {
+      "id": 9,
+      "course_name": "Cybersecurity Fundamentals",
+      "credit_hours": 3,
+      "course_price": 349,
+      "course_detail": "Learn the basics of cybersecurity, including threats, encryption, and security practices.",
+      "image_url": "https://i.ibb.co/gTfy61b/Cybersecurity-Fundamentals.png"
+    }
+  ]
+  
