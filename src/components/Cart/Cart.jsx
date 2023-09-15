@@ -1,12 +1,12 @@
-const Cart = ({ course, handleSelectBtn,handleCredit }) => {
+const Cart = ({ course, handleSelectBtn }) => {
   const { course_name, image_url, course_detail, course_price, credit_hours } =
     course;
 
     const handleSelectBTn = () =>{
-      handleSelectBtn(course)
-      handleCredit(course)
+      handleSelectBtn(course);
+      // handleCredit(id,credit_hours);
 
-    }
+    };
   return (
     <div>
       <div className="card  bg-base-100 shadow-xl h-full p-2 ">
