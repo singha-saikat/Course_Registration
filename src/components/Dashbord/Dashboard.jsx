@@ -3,7 +3,7 @@ import DashboardDisplay from "../DashbordDisplay/DashboardDisplay";
 const Dashboard = ({ dashboard, remaining, credit ,price}) => {
   return (
     <div>
-      <div className="card  bg-base-100 shadow-xl">
+      <div className="card  bg-base-100 shadow-xl p-4">
         <h3 className="text-blue-600 text-left">Credit Hour Remaining {remaining} hr</h3>
 
         <hr className="m-2" />

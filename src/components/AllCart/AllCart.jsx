@@ -1,4 +1,4 @@
-import { toast,ToastContainer } from "react-toastify";
+import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
@@ -8,14 +8,14 @@ const AllCart = () => {
   const [courses, setCourses] = useState([]);
   const [dashboard, setDashboard] = useState([]);
   const [credit, setCredit] = useState(0);
-  const [remaining,setRemaining] =useState(0);
-  const [price,setPrice] =useState (0);
+  const [remaining, setRemaining] = useState(0);
+  const [price, setPrice] = useState(0);
   useEffect(() => {
     fetch("./../../../public/course.json")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
-  
+
   const handleSelectBtn = (course) => {
     let credit = course.credit_hours;
     let price = course.course_price;
@@ -29,10 +29,8 @@ const AllCart = () => {
         price = price + item.course_price;
       });
       const remaining = 20 - credit;
-      if(credit > 20 && remaining <0 ){
-        // toast.error("You have exceeded the credit limit!");
-        // toast.error("You have no credit hour!");
-        toast.warn('You have exceeded the credit limit!', {
+      if (credit > 20 && remaining < 0) {
+        toast.warn("You have exceeded the credit limit!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -41,8 +39,8 @@ const AllCart = () => {
           draggable: true,
           progress: undefined,
           theme: "colored",
-          });
-        toast.warn('You have no credit hour!', {
+        });
+        toast.warn("You have no credit hour!", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: false,
@@ -51,21 +49,19 @@ const AllCart = () => {
           draggable: true,
           progress: undefined,
           theme: "colored",
-          });
+        });
         return [...dashboard];
-      }
-      else{
-        setRemaining(remaining)
-        setCredit(credit)
-        setPrice(price)
-        setDashboard([...dashboard,course])
+      } else {
+        setRemaining(remaining);
+        setCredit(credit);
+        setPrice(price);
+        setDashboard([...dashboard, course]);
       }
     }
 
     const newCourseAdd = [...dashboard, course];
     setDashboard(newCourseAdd);
   };
-  
 
   return (
     <div className="md:flex gap-4">
@@ -78,7 +74,12 @@ const AllCart = () => {
           ></Cart>
         ))}
       </div>
-      <Dashboard dashboard={dashboard}  remaining={remaining} credit={credit} price={price}></Dashboard>
+      <Dashboard
+        dashboard={dashboard}
+        remaining={remaining}
+        credit={credit}
+        price={price}
+      ></Dashboard>
       <ToastContainer />
     </div>
   );
