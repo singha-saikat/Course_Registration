@@ -6,7 +6,7 @@ const Dashboard = ({ dashboard, remaining, credit ,price}) => {
       <div className="card  bg-base-100 shadow-xl p-4">
         <h3 className="text-blue-600 text-left">Credit Hour Remaining {remaining} hr</h3>
 
-        <hr className="m-2" />
+        <hr/>
         {dashboard.map((course, index) => (
           <DashboardDisplay
             key={index}

@@ -6,10 +6,7 @@ const DashboardDisplay = ({ course, index }) => {
       <div>
         {index + 1}.{course_name}
       </div>
-      <div>
-        
-        {/* <p>Total Credit Hour :{credit}</p> */}
-      </div>
+      
     </div>
   );
 };
