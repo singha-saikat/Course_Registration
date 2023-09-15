@@ -30,8 +30,28 @@ const AllCart = () => {
       });
       const remaining = 20 - credit;
       if(credit > 20 && remaining <0 ){
-        toast.error("You have exceeded the credit limit!");
-        toast.error("You have no credit hour!");
+        // toast.error("You have exceeded the credit limit!");
+        // toast.error("You have no credit hour!");
+        toast.warn('You have exceeded the credit limit!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
+        toast.warn('You have no credit hour!', {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+          });
         return [...dashboard];
       }
       else{
