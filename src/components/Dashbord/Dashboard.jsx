@@ -1,19 +1,27 @@
 import DashboardDisplay from "../DashbordDisplay/DashboardDisplay";
 
-const Dashboard = ({ dashboard,credit ,remaining}) => {
- 
+const Dashboard = ({ dashboard, remaining, credit ,price}) => {
   return (
     <div>
       <div className="card  bg-base-100 shadow-xl">
-        <h3 className="text-blue-600">Credit Hour Remaining {remaining} hr</h3>
-        
-        <hr  className="m-2"/>
-        {
-            dashboard.map((course,index) => <DashboardDisplay key={index} course={course} index={index} ></DashboardDisplay>)
-        }
-         
-        
-        
+        <h3 className="text-blue-600 text-left">Credit Hour Remaining {remaining} hr</h3>
+
+        <hr className="m-2" />
+        {dashboard.map((course, index) => (
+          <DashboardDisplay
+            key={index}
+            course={course}
+            index={index}
+          ></DashboardDisplay>
+        ))}
+        <div>
+          <hr className="mt-4" />
+          <h3 className="text-left font-medium mt-2 ">
+            Total Credit Hour :{credit}
+          </h3>
+          <hr className="mt-4" />
+          <h3 className="text-left font-medium mt-2">Total Price : {price} USD</h3>
+        </div>
       </div>
     </div>
   );

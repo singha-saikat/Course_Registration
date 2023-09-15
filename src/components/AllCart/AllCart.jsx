@@ -7,6 +7,7 @@ const AllCart = () => {
   const [dashboard, setDashboard] = useState([]);
   const [credit, setCredit] = useState(0);
   const [remaining,setRemaining] =useState(0);
+  const [price,setPrice] =useState (0);
   useEffect(() => {
     fetch("./../../../public/course.json")
       .then((res) => res.json())
@@ -14,6 +15,7 @@ const AllCart = () => {
   }, []);
   const handleSelectBtn = (course) => {
     let credit = course.credit_hours;
+    let price = course.course_price;
     const isExist = dashboard.find((item) => item.id == course.id);
 
     if (isExist) {
@@ -21,6 +23,7 @@ const AllCart = () => {
     } else {
       dashboard.forEach((item) => {
         credit = credit + item.credit_hours;
+        price = price + item.course_price;
       });
       const remaining = 20 - credit;
       if(credit > 20){
@@ -29,6 +32,7 @@ const AllCart = () => {
       else{
         setRemaining(remaining)
         setCredit(credit)
+        setPrice(price)
         setDashboard([...dashboard,course])
       }
     }
@@ -36,11 +40,7 @@ const AllCart = () => {
     const newCourseAdd = [...dashboard, course];
     setDashboard(newCourseAdd);
   };
-  // const handleCredit = (id,credit_hours) =>{
-  //   const newCredit = credit + credit_hours;
-  //   setCredit(newCredit)
-
-  // }
+  
 
   return (
     <div className="md:flex gap-4">
@@ -53,7 +53,7 @@ const AllCart = () => {
           ></Cart>
         ))}
       </div>
-      <Dashboard dashboard={dashboard} credit={credit} remaining={remaining} ></Dashboard>
+      <Dashboard dashboard={dashboard}  remaining={remaining} credit={credit} price={price}></Dashboard>
     </div>
   );
 };
