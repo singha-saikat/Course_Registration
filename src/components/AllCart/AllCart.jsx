@@ -1,3 +1,5 @@
+import { toast,ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Dashboard from "../Dashbord/Dashboard";
@@ -13,6 +15,7 @@ const AllCart = () => {
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
+  
   const handleSelectBtn = (course) => {
     let credit = course.credit_hours;
     let price = course.course_price;
@@ -26,8 +29,10 @@ const AllCart = () => {
         price = price + item.course_price;
       });
       const remaining = 20 - credit;
-      if(credit > 20){
-        alert('hello')
+      if(credit > 20 && remaining <0 ){
+        toast.error("You have exceeded the credit limit!");
+        toast.error("You have no credit hour!");
+        return [...dashboard];
       }
       else{
         setRemaining(remaining)
@@ -54,6 +59,7 @@ const AllCart = () => {
         ))}
       </div>
       <Dashboard dashboard={dashboard}  remaining={remaining} credit={credit} price={price}></Dashboard>
+      <ToastContainer />
     </div>
   );
 };

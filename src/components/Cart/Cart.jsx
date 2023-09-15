@@ -4,6 +4,7 @@ const Cart = ({ course, handleSelectBtn }) => {
 
     const handleSelectBTn = () =>{
       handleSelectBtn(course);
+     
       // handleCredit(id,credit_hours);
 
     };
@@ -49,6 +50,7 @@ const Cart = ({ course, handleSelectBtn }) => {
             >
               Select
             </button>
+            
           </div>
         </div>
       </div>
