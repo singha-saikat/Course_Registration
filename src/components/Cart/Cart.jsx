@@ -17,7 +17,7 @@ const Cart = ({ course, handleSelectBtn }) => {
         <div className="card-body p-0  items-center w-full">
           <h2 className="card-title ">{course_name}</h2>
           <p>{course_detail}</p>
-          <div className="flex gap-8 md:gap-12 lg:gap-16 justify-between">
+          <div className="flex gap-8 lg:gap-16 justify-between">
             <p>$ Price: {course_price}</p>
             <div className="flex">
               <svg

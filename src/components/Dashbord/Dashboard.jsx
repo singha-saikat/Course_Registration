@@ -1,6 +1,6 @@
 import DashboardDisplay from "../DashbordDisplay/DashboardDisplay";
 
-const Dashboard = ({ dashboard, remaining, credit ,price}) => {
+const Dashboard = ({ dashboard, remaining, credit ,price }) => {
   return (
     <div>
       <div className="card  bg-base-100 shadow-xl p-4">
