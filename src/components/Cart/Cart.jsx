@@ -6,12 +6,12 @@ const Cart = ({ course, handleSelectBtn }) => {
     <div>
       <div className="card  bg-base-100 shadow-xl h-full p-2 ">
         <figure className="w-full h-48 p-4">
-          <img src={image_url} alt="" className="rounded-xl" />
+          <img src={image_url} alt="" className="rounded-xl w-full h-full " />
         </figure>
         <div className="card-body p-0  items-center w-full">
           <h2 className="card-title ">{course_name}</h2>
           <p>{course_detail}</p>
-          <div className="flex gap-8 lg:gap-16 justify-between">
+          <div className="flex gap-8 lg:gap-6 xl:gap-16 justify-between">
             <p>$ Price: {course_price}</p>
             <div className="flex">
               <svg
@@ -36,7 +36,7 @@ const Cart = ({ course, handleSelectBtn }) => {
           <div>
             <button
               onClick={() => handleSelectBtn(course)}
-              className="btn  lg:btn-wide   bg-blue-500 mb-4"
+              className="btn  xl:btn-wide   bg-blue-500 mb-4"
             >
               Select
             </button>
