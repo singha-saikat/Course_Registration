@@ -40,6 +40,7 @@ const AllCart = () => {
           progress: undefined,
           theme: "colored",
         });
+        <br />
         toast.warn("You have no credit hour!", {
           position: "top-right",
           autoClose: 5000,
