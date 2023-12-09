@@ -3,7 +3,7 @@
 Course Registration is a dynamic web application developed using React, designed to simplify the course selection of users.
 
 
-## Q1 : Add at least 3 Project features
+##  Project features
 
 - Course Selection Feature:
 - Total Credit Hours: 
@@ -23,7 +23,7 @@ Course Selection Feature: The course selection feature provides users with a com
 
 3.To еnsurе a balancеd and managеablе coursе load, usеrs arе limitеd to sеlеcting coursеs with a combinеd total of 20 crеdit hours or lеss. This fеaturе promotеs еffеctivе timе managеmеnt and еncouragеs usеrs to focus on quality lеarning еxpеriеncеs.
 
-## Q2 : Discuss how you managed the state in your assignment project.
+## how I managed the state .
 
 In this React project I managing, state using the useState hook. State management is a essential aspect of react application as it allows to store and update data that affects component's behabior and rendering.
 - Importing react hooks
